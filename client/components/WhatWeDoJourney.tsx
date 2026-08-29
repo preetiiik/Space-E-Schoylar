@@ -14,6 +14,7 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
+import Reveal from "./Reveal";
 
 const ACTIVITIES = [
   {
@@ -168,6 +169,7 @@ export default function WhatWeDoJourney() {
   const flameScale = useTransform(progress, [0, 1], [0.85, 1.15]);
 
   return (
+    <>
     <section
       ref={sectionRef}
       className="journey-section"
@@ -394,5 +396,33 @@ export default function WhatWeDoJourney() {
 
       </div>
     </section>
+    <section className="journey-mobile" aria-labelledby="what-we-do-mobile-heading">
+      <div className="journey-mobile-heading">
+        <span>OUR MISSION IN MOTION</span>
+        <h2 id="what-we-do-mobile-heading">
+          What We <em>Do?</em>
+        </h2>
+        <p>Explore the ways we bring space education to life.</p>
+      </div>
+
+      <div className="journey-mobile-cards">
+        {ACTIVITIES.map((activity, index) => {
+          const Icon = activity.icon;
+
+          return (
+            <Reveal key={activity.title} delay={index * 70}>
+              <article className="journey-mobile-card">
+                <span className="journey-card-number">0{index + 1}</span>
+                <span className="journey-card-icon">
+                  <Icon size={18} aria-hidden="true" />
+                </span>
+                <p>{activity.title}</p>
+              </article>
+            </Reveal>
+          );
+        })}
+      </div>
+    </section>
+    </>
   );
 }

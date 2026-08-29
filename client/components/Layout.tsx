@@ -42,14 +42,14 @@ function Navbar() {
           : "border-b border-transparent bg-transparent",
       )}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-10">
-        <Link to="/" className="flex items-center gap-3">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-10">
+        <Link to="/" className="min-w-0 flex items-center gap-2 sm:gap-3">
           <img
             src={LOGO_URL}
             alt="Space E Schoylar logo"
             className="h-11 w-11 rounded-full object-cover"
           />
-          <span className="font-heading text-lg font-bold tracking-tight text-foreground">
+          <span className="truncate font-heading text-base font-bold tracking-tight text-foreground sm:text-lg">
             Space E Schoylar
           </span>
         </Link>
@@ -106,7 +106,7 @@ function Navbar() {
           open ? "max-h-[28rem] opacity-100" : "max-h-0 opacity-0",
         )}
       >
-        <div className="flex flex-col gap-1 px-6 py-4">
+        <div className="flex flex-col gap-1 px-4 py-4 sm:px-6">
           {NAV_LINKS.map((link) => {
             const active = location.pathname === link.to;
             return (
@@ -139,7 +139,7 @@ function Navbar() {
 function Footer() {
   return (
     <footer className="relative z-10 border-t border-white/10 bg-background/60 backdrop-blur-xl">
-      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 sm:grid-cols-2 lg:grid-cols-4 lg:px-10">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:grid-cols-2 sm:px-6 sm:py-16 lg:grid-cols-4 lg:px-10">
         <div className="sm:col-span-2 lg:col-span-1">
           <Link to="/" className="flex items-center gap-3">
             <img
@@ -235,7 +235,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/10 px-6 py-6 text-center text-xs text-muted-foreground">
+      <div className="border-t border-white/10 px-4 py-6 text-center text-xs text-muted-foreground sm:px-6">
   © {new Date().getFullYear()} Space E Schoylar. All Rights Reserved.{" "}
   <span>Powered by </span>
   <a

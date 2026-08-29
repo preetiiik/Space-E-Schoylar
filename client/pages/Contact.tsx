@@ -61,7 +61,7 @@ export default function Contact() {
 
       <div className="mt-14 grid gap-8 lg:grid-cols-5">
         <Reveal className="lg:col-span-2" delay={100}>
-          <div className="glass-panel flex h-full flex-col gap-6 p-8">
+          <div className="glass-panel flex h-full flex-col gap-6 p-5 sm:p-8">
             <h2 className="font-heading text-xl font-bold text-foreground">
               Get in touch
             </h2>
@@ -113,7 +113,7 @@ export default function Contact() {
           <form
             onSubmit={handleSubmit}
             noValidate
-            className="glass-panel space-y-5 p-8"
+            className="glass-panel space-y-5 p-5 sm:p-8"
           >
             {status === "success" && (
               <div className="flex items-center gap-2 rounded-xl border border-primary/30 bg-primary/10 px-4 py-3 text-sm font-semibold text-primary">

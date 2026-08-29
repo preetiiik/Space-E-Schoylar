@@ -98,10 +98,10 @@ export default function PrivacyPolicy() {
         </p>
       </Reveal>
 
-      <div className="mt-14 space-y-6">
+      <div className="mt-10 space-y-5 sm:mt-14 sm:space-y-6">
         {SECTIONS.map((section, i) => (
           <Reveal key={section.title} delay={i * 80}>
-            <div className="glass-panel p-8 text-left sm:p-10">
+            <div className="glass-panel p-5 text-left sm:p-10">
               <h2 className="font-heading text-2xl font-bold text-foreground">
                 {section.title}
               </h2>

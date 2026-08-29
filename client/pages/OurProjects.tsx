@@ -18,12 +18,12 @@ export default function OurProjects() {
         </p>
       </Reveal>
 
-      <div className="mt-16 space-y-8">
+      <div className="mt-10 space-y-6 sm:mt-16 sm:space-y-8">
         {PROJECTS.map((project, i) => (
           <Reveal key={project.title} delay={i * 100}>
             <Link
               to={`/our-projects/${project.id}`}
-              className={`glass-card flex flex-col gap-6 p-8 sm:p-10 lg:flex-row lg:items-center ${
+              className={`glass-card flex flex-col gap-6 p-5 sm:p-10 lg:flex-row lg:items-center ${
                 i % 2 === 1 ? "lg:flex-row-reverse" : ""
               } group cursor-pointer`}
             >

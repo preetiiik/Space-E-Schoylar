@@ -15,7 +15,7 @@ export default function OurInitiatives() {
       </Reveal>
 
       <Reveal delay={100}>
-        <div className="glass-panel mt-14 p-8 sm:p-10">
+        <div className="glass-panel mt-10 p-5 sm:mt-14 sm:p-10">
           <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
             <HeartHandshake size={28} />
           </div>
@@ -38,7 +38,7 @@ export default function OurInitiatives() {
       </Reveal>
 
       <Reveal delay={150}>
-        <div className="glass-panel mt-8 p-8 sm:p-10">
+        <div className="glass-panel mt-8 p-5 sm:p-10">
           <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
             <Rocket size={28} />
           </div>
@@ -66,7 +66,7 @@ export default function OurInitiatives() {
 
       <div className="mt-8 grid gap-8 lg:grid-cols-2">
         <Reveal delay={220}>
-          <div className="glass-card h-full p-8 sm:p-10">
+          <div className="glass-card h-full p-5 sm:p-10">
             <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
               <GraduationCap size={28} />
             </div>
@@ -84,7 +84,7 @@ export default function OurInitiatives() {
         </Reveal>
 
         <Reveal delay={290}>
-          <div className="glass-card h-full p-8 sm:p-10">
+          <div className="glass-card h-full p-5 sm:p-10">
             <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
               <Rocket size={28} />
             </div>

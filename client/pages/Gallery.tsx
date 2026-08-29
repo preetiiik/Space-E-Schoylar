@@ -63,11 +63,11 @@ export default function Gallery() {
 
       {active && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-6 backdrop-blur-sm"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 sm:p-6 backdrop-blur-sm"
           onClick={() => setActive(null)}
         >
           <button
-            className="absolute right-6 top-6 rounded-full border border-white/20 bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
+            className="absolute right-4 top-4 rounded-full border border-white/20 bg-white/10 p-2 text-white transition-colors hover:bg-white/20 sm:right-6 sm:top-6"
             onClick={() => setActive(null)}
             aria-label="Close"
           >

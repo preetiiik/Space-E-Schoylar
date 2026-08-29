@@ -28,14 +28,14 @@ function TeamAvatar({ name, image }: { name: string; image: string }) {
 
   if (failed) {
     return (
-      <div className="flex h-32 w-32 items-center justify-center rounded-full border-2 border-primary/40 bg-primary/10 font-heading text-3xl font-bold text-primary sm:h-36 sm:w-36">
+      <div className="flex h-24 w-24 items-center justify-center rounded-full border-2 border-primary/40 bg-primary/10 font-heading text-2xl font-bold text-primary sm:h-36 sm:w-36">
         {initials(name)}
       </div>
     );
   }
 
   return (
-    <div className="h-32 w-32 overflow-hidden rounded-full border-2 border-primary/40 bg-primary/10 sm:h-36 sm:w-36">
+    <div className="h-24 w-24 overflow-hidden rounded-full border-2 border-primary/40 bg-primary/10 sm:h-36 sm:w-36">
       <img
         src={image}
         alt={name}
@@ -58,10 +58,10 @@ export default function Teams() {
         </h1>
       </Reveal>
 
-      <div className="mt-14 grid grid-cols-2 gap-6 sm:grid-cols-4">
+      <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-14 sm:gap-6 sm:grid-cols-4">
         {TEAM.map((member, i) => (
           <Reveal key={member.name} delay={i * 60}>
-            <div className="glass-card flex h-full flex-col items-center gap-5 p-8 text-center">
+            <div className="glass-card flex h-full flex-col items-center gap-4 p-4 text-center sm:gap-5 sm:p-8">
               <TeamAvatar name={member.name} image={member.image} />
               <div>
                 <h3 className="font-heading text-sm font-bold text-foreground">

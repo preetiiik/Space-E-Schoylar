@@ -19,12 +19,12 @@ function DonationDialog({ type }: { type: "financial" | "equipment" }) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button className={isFinancial ? "mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-3.5 font-bold text-primary-foreground shadow-glow transition-all duration-300 hover:scale-105 hover:shadow-glow-lg" : "mt-2 inline-flex items-center justify-center gap-2 rounded-full border border-primary/40 bg-white/5 px-8 py-3.5 font-bold text-foreground backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-primary/10"}>
+        <button className={isFinancial ? "mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-3.5 font-bold text-primary-foreground shadow-glow transition-all duration-300 hover:scale-105 hover:shadow-glow-lg sm:w-auto sm:px-8" : "mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full border border-primary/40 bg-white/5 px-5 py-3.5 font-bold text-foreground backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-primary/10 sm:w-auto sm:px-8"}>
           {isFinancial ? <Rocket size={18} /> : <Wrench size={18} />}
           {isFinancial ? "Donate Now" : "Donate Equipment"}
         </button>
       </DialogTrigger>
-      <DialogContent className="border-primary/25 bg-[#06111d]/95 text-center backdrop-blur-xl sm:max-w-md">
+      <DialogContent className="w-[calc(100%-2rem)] border-primary/25 bg-[#06111d]/95 p-5 text-center backdrop-blur-xl sm:max-w-md sm:p-6">
         <DialogHeader className="items-center text-center">
           <DialogTitle className="font-heading text-2xl text-foreground">{label}</DialogTitle>
           <DialogDescription className="max-w-xs text-center">Scan the QR code to continue. This is a placeholder code and can be replaced with the official payment QR later.</DialogDescription>
@@ -38,23 +38,23 @@ function DonationDialog({ type }: { type: "financial" | "equipment" }) {
             <p className="text-xs font-bold uppercase tracking-widest">Bank Details (Placeholder)</p>
           </div>
           <dl className="space-y-1.5 text-sm text-muted-foreground">
-            <div className="flex justify-between gap-4">
+            <div className="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
               <dt className="text-foreground/70">Account Name</dt>
               <dd className="font-medium text-foreground">Sample Foundation Trust</dd>
             </div>
-            <div className="flex justify-between gap-4">
+            <div className="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
               <dt className="text-foreground/70">Account Number</dt>
               <dd className="font-medium text-foreground">000123456789</dd>
             </div>
-            <div className="flex justify-between gap-4">
+            <div className="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
               <dt className="text-foreground/70">IFSC Code</dt>
               <dd className="font-medium text-foreground">SAMP0000123</dd>
             </div>
-            <div className="flex justify-between gap-4">
+            <div className="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
               <dt className="text-foreground/70">Bank Name</dt>
               <dd className="font-medium text-foreground">Sample National Bank</dd>
             </div>
-            <div className="flex justify-between gap-4">
+            <div className="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
               <dt className="text-foreground/70">Branch</dt>
               <dd className="font-medium text-foreground">Sample City Branch</dd>
             </div>
@@ -83,7 +83,7 @@ export default function Donation() {
         </Reveal>
 
         <Reveal delay={100}>
-          <div className="glass-panel mt-10 space-y-5 p-8 text-left text-muted-foreground sm:p-10">
+          <div className="glass-panel mt-10 space-y-5 p-5 text-left text-muted-foreground sm:p-10">
             <p className="leading-relaxed">
               You're invited to join us on this thrilling journey! Your
               generous support, whether through financial donations or
@@ -114,7 +114,7 @@ export default function Donation() {
       <section className="section-padding mx-auto max-w-5xl">
         <div className="grid gap-8 sm:grid-cols-2">
           <Reveal delay={150}>
-            <div className="glass-card flex h-full flex-col items-center gap-5 p-10 text-center">
+            <div className="glass-card flex h-full flex-col items-center gap-5 p-6 text-center sm:p-10">
               <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                 <HeartHandshake size={32} />
               </div>
@@ -130,7 +130,7 @@ export default function Donation() {
           </Reveal>
 
           <Reveal delay={220}>
-            <div className="glass-card flex h-full flex-col items-center gap-5 p-10 text-center">
+            <div className="glass-card flex h-full flex-col items-center gap-5 p-6 text-center sm:p-10">
               <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                 <Wrench size={32} />
               </div>

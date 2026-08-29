@@ -66,22 +66,22 @@ export default function Index() {
         {/* Dark overlay for text readability over the video */}
         <div className="absolute inset-0 -z-10 bg-black/60" />
 
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-2 lg:items-center lg:px-10">
+        <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 py-20 sm:px-6 sm:py-24 lg:grid-cols-2 lg:items-center lg:px-10">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-primary">
               <Rocket size={14} /> Space E Schoylar
             </span>
-            <h1 className="mt-6 font-heading text-4xl font-extrabold leading-tight text-foreground sm:text-5xl lg:text-6xl">
+            <h1 className="mt-6 font-heading text-3xl font-extrabold leading-tight text-foreground sm:text-5xl lg:text-6xl">
               Mission Space for{" "}
               <span className="cosmic-text">Every Child</span>
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
               A registered NGO (RNPO, 2023) inspiring and empowering underprivileged children through space education — and it's boundless career possibilities.
             </p>
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
               <Link
                 to="/donation"
-                className="group inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 font-bold text-primary-foreground shadow-glow transition-all duration-300 hover:scale-105 hover:shadow-glow-lg"
+                className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 font-bold text-primary-foreground shadow-glow transition-all duration-300 hover:scale-105 hover:shadow-glow-lg sm:w-auto"
               >
                 Donate Now
                 <ArrowRight
@@ -91,14 +91,14 @@ export default function Index() {
               </Link>
               <Link
                 to="/our-projects"
-                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 py-3.5 font-bold text-foreground backdrop-blur-md transition-all duration-300 hover:border-primary/40 hover:bg-white/10"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 py-3.5 font-bold text-foreground backdrop-blur-md transition-all duration-300 hover:border-primary/40 hover:bg-white/10 sm:w-auto"
               >
                 Explore Our Projects
               </Link>
             </div>
           </div>
 
-          <div className="relative flex min-h-[420px] items-center justify-center" />
+          <div className="relative hidden min-h-[420px] items-center justify-center lg:flex" />
         </div>
 
         {/* Decorative astronaut animation, right side of Hero */}
@@ -146,7 +146,7 @@ export default function Index() {
             </div>
 
             <Reveal delay={150}>
-              <div className="glass-panel space-y-5 p-8 text-left text-muted-foreground sm:p-10">
+              <div className="glass-panel space-y-5 p-5 text-left text-muted-foreground sm:p-10">
                 <p className="leading-relaxed">
                   Welcome to Space E Schoylar (SES) — where the cosmos becomes the classroom, and children who've never had access to science education get to reach for the stars.
                 </p>
@@ -234,7 +234,7 @@ export default function Index() {
       {/* Why space education matters */}
       <section className="section-padding relative">
         <Reveal>
-          <div className="glass-panel mx-auto max-w-4xl p-10 text-center">
+          <div className="glass-panel mx-auto max-w-4xl p-6 text-center sm:p-10">
             <h2 className="font-heading text-3xl font-bold text-foreground">
               Why Space Education matters?
             </h2>
@@ -264,11 +264,11 @@ export default function Index() {
           </Reveal>
 
           <Reveal delay={100}>
-            <div className="glass-panel mt-10 p-8 text-left sm:p-10">
+            <div className="glass-panel mt-10 p-5 text-left sm:p-10">
               <img
                 src="/images/himalayan-space-centre-logo.png"
                 alt="Himalayan Space Centre"
-                className="float-right ml-6 mb-4 w-full max-w-[12rem]"
+                className="mx-auto mb-6 w-full max-w-[10rem] sm:float-right sm:ml-6 sm:mb-4 sm:max-w-[12rem]"
               />
               <h3 className="font-heading text-2xl font-bold text-foreground">
                 Bridging the Gap between Earth and Beyond...
@@ -309,7 +309,7 @@ export default function Index() {
       {/* CTA */}
       <section className="section-padding relative">
         <Reveal>
-          <div className="glass-panel mx-auto flex max-w-4xl flex-col items-center gap-6 p-10 text-center">
+          <div className="glass-panel mx-auto flex max-w-4xl flex-col items-center gap-6 p-6 text-center sm:p-10">
             <h2 className="font-heading text-2xl font-bold text-foreground sm:text-3xl">
               Ready to help us reach for the stars?
             </h2>
