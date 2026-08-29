@@ -379,7 +379,7 @@ export default function SpaceBackground() {
     <div className="fixed inset-0 -z-10 overflow-hidden bg-[#020713]">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/space-nebula-background.png')" }}
+        style={{ backgroundImage: "url('/images/space-nebula-background4.png')" }}
       />
       <div className="absolute inset-0 bg-[#020713]/45" />
       <canvas ref={canvasRef} className="absolute inset-0" />
