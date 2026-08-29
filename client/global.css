@@ -1,0 +1,322 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+@import "tailwindcss";
+
+/* Theme, content globs, and plugins are declared in tailwind.config.ts. */
+@config "../tailwind.config.ts";
+
+@layer base {
+  /**
+   * Space E Schoylar cosmic theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   */
+  :root {
+    --background: 226 45% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 226 40% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 226 45% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 196 92% 58%;
+    --primary-foreground: 226 45% 6%;
+
+    --secondary: 222 38% 16%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 222 30% 16%;
+    --muted-foreground: 214 20% 72%;
+
+    --accent: 190 95% 55%;
+    --accent-foreground: 226 45% 6%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 32% 22%;
+    --input: 217 32% 20%;
+    --ring: 196 92% 58%;
+
+    --radius: 1rem;
+
+    --cosmic: 196 92% 58%;
+    --cosmic-cyan: 187 94% 55%;
+    --cosmic-deep: 246 60% 30%;
+
+    --sidebar-background: 226 45% 6%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 196 92% 58%;
+    --sidebar-primary-foreground: 226 45% 6%;
+    --sidebar-accent: 222 38% 16%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 32% 22%;
+    --sidebar-ring: 196 92% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.35);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply relative rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.35)];
+  }
+
+  .glass-card {
+    @apply relative rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.35)] transition-all duration-500 hover:border-primary/40 hover:shadow-glow hover:-translate-y-1;
+  }
+
+  .cosmic-text {
+    @apply bg-gradient-to-r from-cosmic via-cosmic-cyan to-cosmic bg-clip-text text-transparent;
+  }
+
+  .section-padding {
+    @apply px-6 py-20 sm:px-10 lg:px-16 lg:py-28;
+  }
+
+  .home-hero-background {
+    position: absolute;
+    inset: -5%;
+    background-image: url("/images/photorealistic-earth-planet.jpg");
+    background-position: center;
+    background-size: cover;
+    opacity: 0.62;
+    transform: scale(1.05);
+    animation: space-drift 26s ease-in-out infinite alternate;
+  }
+
+  .home-hero-vignette {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, hsl(226 45% 5% / 0.92) 0%, hsl(226 45% 5% / 0.68) 48%, hsl(226 45% 5% / 0.42) 100%),
+      linear-gradient(180deg, hsl(226 45% 5% / 0.25), hsl(226 45% 5% / 0.72));
+  }
+
+  .home-hero-rocket {
+    filter: drop-shadow(0 20px 36px rgb(0 0 0 / 0.55));
+    animation: rocket-hover 7s ease-in-out infinite;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.8s ease-out,
+      transform 0.8s ease-out;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .journey-section {
+    position: relative;
+    height: 440vh;
+    min-height: 2300px;
+  }
+
+  .journey-stage {
+    position: sticky;
+    top: 0;
+    height: 100svh;
+    overflow: hidden;
+    isolation: isolate;
+    background:
+      radial-gradient(circle at 50% 105%, hsl(var(--cosmic) / 0.12), transparent 31%),
+      linear-gradient(180deg, hsl(226 45% 5% / 0.35), hsl(226 45% 6% / 0.1));
+  }
+
+  .journey-aurora {
+    position: absolute;
+    inset: -20%;
+    z-index: -1;
+    opacity: 0.4;
+    background:
+      radial-gradient(ellipse at 25% 45%, hsl(var(--cosmic-deep) / 0.35), transparent 30%),
+      radial-gradient(ellipse at 75% 25%, hsl(var(--cosmic) / 0.2), transparent 25%);
+    filter: blur(32px);
+    animation: journey-drift 18s ease-in-out infinite alternate;
+  }
+
+  .journey-heading {
+    position: absolute;
+    z-index: 3;
+    top: clamp(2.5rem, 8vh, 5rem);
+    left: 50%;
+    width: min(92vw, 40rem);
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  .journey-heading > span {
+    color: hsl(var(--primary));
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.22em;
+  }
+
+  .journey-heading h2 {
+    margin-top: 0.65rem;
+    color: hsl(var(--foreground));
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  .journey-heading em {
+    font-style: normal;
+    background: linear-gradient(90deg, hsl(var(--cosmic)), hsl(var(--cosmic-cyan)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .journey-heading p {
+    margin-top: 0.8rem;
+    color: hsl(var(--muted-foreground));
+    font-size: 0.85rem;
+  }
+
+  .journey-cards {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .journey-card {
+    position: absolute;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: start;
+    gap: 0.65rem;
+    width: min(29rem, 38vw);
+    padding: 0.9rem 1rem;
+    border: 1px solid hsl(var(--primary) / 0.25);
+    border-radius: 1rem;
+    background: hsl(226 42% 9% / 0.72);
+    box-shadow: 0 10px 35px rgb(0 0 0 / 0.28), inset 0 1px 0 rgb(255 255 255 / 0.05);
+    backdrop-filter: blur(14px);
+  }
+
+  .journey-card p {
+    color: hsl(var(--foreground) / 0.94);
+    font-size: clamp(0.72rem, 1.1vw, 0.9rem);
+    font-weight: 600;
+    line-height: 1.45;
+  }
+
+  .journey-card-number { color: hsl(var(--primary) / 0.65); font-size: 0.66rem; font-weight: 800; padding-top: 0.15rem; }
+  .journey-card-icon { display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: 0.65rem; background: hsl(var(--primary) / 0.12); color: hsl(var(--primary)); }
+  /* Paired rows preserve a clear launch corridor through the centre. */
+  .journey-card-0 { top: 31%; left: 6%; }
+  .journey-card-1 { top: 31%; right: 6%; }
+  .journey-card-2 { top: 44%; left: 6%; }
+  .journey-card-3 { top: 44%; right: 6%; }
+  .journey-card-4 { top: 57%; left: 6%; }
+  .journey-card-5 { top: 57%; right: 6%; }
+  .journey-card-6 { top: 70%; left: 6%; }
+  .journey-card-7 { top: 70%; right: 6%; }
+
+  .journey-rocket {
+  position: absolute;
+  z-index: 4;
+  left: calc(50% - 3.4rem);
+  width: clamp(5.5rem, 10vw, 8rem);
+  filter: drop-shadow(0 0 14px hsl(var(--primary) / 0.75));
+}
+
+  .journey-realistic-rocket { display: block; width: 100%; height: auto; mix-blend-mode: screen; }
+  .journey-legacy-rocket {
+  display: block;
+  transform: scale(0.55);
+  transform-origin: center center;
+}
+
+ .journey-rocket-body {
+  display: grid;
+  place-items: center;
+  transform: rotate(-5deg);
+}
+
+.journey-rocket-body svg {
+  display: block;
+  width: 71%;
+  height: auto;
+  overflow: visible;
+}
+  .journey-flame { position: absolute; z-index: -1; left: 2.9rem; top: 6.15rem; width: 0.85rem; height: 3.4rem; transform-origin: top; border-radius: 50% 50% 70% 70%; background: linear-gradient(to bottom, #fff5b2 0%, #72e5ff 28%, #ff9e45 60%, transparent 100%); box-shadow: 0 0 16px hsl(var(--primary) / 0.7); filter: blur(0.7px); }
+  .journey-smoke { position: absolute; z-index: -2; left: 1.75rem; top: 8rem; width: 1.1rem; height: 1.1rem; border-radius: 999px; background: hsl(var(--primary) / 0.2); filter: blur(3px); animation: journey-smoke 1.7s ease-out infinite; }
+  .journey-smoke-two { left: 2.3rem; top: 8.8rem; animation-delay: 0.85s; }
+
+  .journey-progress { position: absolute; z-index: 1; bottom: 6vh; left: 50%; width: 1px; height: 24vh; background: linear-gradient(hsl(var(--primary) / 0.05), hsl(var(--primary) / 0.4)); transform: translateX(-50%); }
+  .journey-progress span { display: block; width: 100%; height: 100%; transform-origin: bottom; background: hsl(var(--primary)); box-shadow: 0 0 10px hsl(var(--primary)); }
+  .journey-scroll-cue { position: absolute; z-index: 2; bottom: 3vh; left: 50%; transform: translateX(-50%); color: hsl(var(--muted-foreground)); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; }
+
+  @keyframes space-drift { to { transform: scale(1.14) translate3d(-1.5%, 1%, 0); background-position: 54% 46%; } }
+  @keyframes rocket-hover { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-16px) rotate(1deg); } }
+  @keyframes journey-drift { to { transform: translate3d(3%, -2%, 0) scale(1.05); } }
+  @keyframes journey-smoke { from { opacity: 0.55; transform: translateY(0) scale(0.5); } to { opacity: 0; transform: translateY(1.8rem) scale(1.8); } }
+
+  @media (max-width: 640px) {
+    .journey-section { height: 520vh; min-height: 2800px; }
+    .journey-heading { top: 2.2rem; }
+    .journey-heading p { font-size: 0.73rem; }
+    .journey-card { width: min(84vw, 23rem); padding: 0.72rem 0.78rem; }
+    .journey-card p { font-size: 0.73rem; }
+    .journey-card-0 { top: 27%; left: 8%; }
+    .journey-card-1 { top: 36%; right: 8%; }
+    .journey-card-2 { top: 45%; left: 8%; }
+    .journey-card-3 { top: 54%; right: 8%; }
+    .journey-card-4 { top: 63%; left: 8%; }
+    .journey-card-5 { top: 30%; right: 8%; }
+    .journey-card-6 { top: 72%; left: 8%; }
+    .journey-card-7 { top: 72%; right: 8%; }
+    .journey-progress { height: 18vh; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .home-hero-background, .home-hero-rocket, .journey-aurora, .journey-smoke { animation: none; }
+  }
+}
