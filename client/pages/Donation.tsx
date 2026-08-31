@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { HeartHandshake, Wrench, ShieldCheck, Rocket, Landmark } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import {
@@ -9,27 +10,21 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-function DonationDialog({ type }: { type: "financial" | "equipment" }) {
-  const isFinancial = type === "financial";
-  const label = isFinancial ? "Financial Donation" : "Equipment Donation";
-  const qr = isFinancial
-    ? "/images/qr-financial-placeholder.svg"
-    : "/images/qr-equipment-placeholder.svg";
-
+function DonationDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button className={isFinancial ? "mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-3.5 font-bold text-primary-foreground shadow-glow transition-all duration-300 hover:scale-105 hover:shadow-glow-lg sm:w-auto sm:px-8" : "mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full border border-primary/40 bg-white/5 px-5 py-3.5 font-bold text-foreground backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-primary/10 sm:w-auto sm:px-8"}>
-          {isFinancial ? <Rocket size={18} /> : <Wrench size={18} />}
-          {isFinancial ? "Donate Now" : "Donate Equipment"}
+        <button className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-3.5 font-bold text-primary-foreground shadow-glow transition-all duration-300 hover:scale-105 hover:shadow-glow-lg sm:w-auto sm:px-8">
+          <Rocket size={18} />
+          Donate Now
         </button>
       </DialogTrigger>
       <DialogContent className="w-[calc(100%-2rem)] border-primary/25 bg-[#06111d]/95 p-5 text-center backdrop-blur-xl sm:max-w-md sm:p-6">
         <DialogHeader className="items-center text-center">
-          <DialogTitle className="font-heading text-2xl text-foreground">{label}</DialogTitle>
+          <DialogTitle className="font-heading text-2xl text-foreground">Financial Donation</DialogTitle>
           <DialogDescription className="max-w-xs text-center">Scan the QR code to continue. This is a placeholder code and can be replaced with the official payment QR later.</DialogDescription>
         </DialogHeader>
-        <img src={qr} alt={`${label} placeholder QR code`} className="mx-auto w-52 rounded-xl bg-white p-3 shadow-glow" />
+        <img src="/images/qr-financial-placeholder.svg" alt="Financial Donation placeholder QR code" className="mx-auto w-52 rounded-xl bg-white p-3 shadow-glow" />
         <p className="text-xs font-bold uppercase tracking-widest text-primary">Placeholder QR code</p>
 
         <div className="mt-4 rounded-xl border border-primary/20 bg-white/5 p-4 text-left">
@@ -71,7 +66,7 @@ function DonationDialog({ type }: { type: "financial" | "equipment" }) {
 export default function Donation() {
   return (
     <div>
-      <section className="section-padding mx-auto max-w-4xl text-center">
+      <section className="section-padding mx-auto max-w-5xl text-center">
         <Reveal>
           <span className="text-sm font-bold uppercase tracking-widest text-primary">
             Join the cause
@@ -83,7 +78,7 @@ export default function Donation() {
         </Reveal>
 
         <Reveal delay={100}>
-          <div className="glass-panel mt-10 space-y-5 p-5 text-left text-muted-foreground sm:p-10">
+          <div className="glass-panel mt-10 space-y-5 p-5 text-left text-muted-foreground sm:p-8">
             <p className="leading-relaxed">
               You're invited to join us on this thrilling journey! Your
               generous support, whether through financial donations or
@@ -125,7 +120,9 @@ export default function Donation() {
                 Fuel scholarships, lab equipment, and workshops that bring
                 space education directly to underprivileged children.
               </p>
-              <DonationDialog type="financial" />
+              <div className="mt-auto pt-2">
+                <DonationDialog />
+              </div>
             </div>
           </Reveal>
 
@@ -141,7 +138,15 @@ export default function Donation() {
                 Enable impactful hands-on learning by providing vital tools
                 and resources for our immersive workshops.
               </p>
-              <DonationDialog type="equipment" />
+              <div className="mt-auto pt-2">
+                <Link
+                  to="/contact"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-primary/40 bg-white/5 px-5 py-3.5 font-bold text-foreground backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-primary/10 sm:w-auto sm:px-8"
+                >
+                  <Wrench size={18} />
+                  Donate Equipment
+                </Link>
+              </div>
             </div>
           </Reveal>
         </div>
