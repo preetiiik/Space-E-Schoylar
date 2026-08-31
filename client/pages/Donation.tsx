@@ -22,41 +22,40 @@ function DonationDialog() {
       <DialogContent className="w-[calc(100%-2rem)] border-primary/25 bg-[#06111d]/95 p-5 text-center backdrop-blur-xl sm:max-w-md sm:p-6">
         <DialogHeader className="items-center text-center">
           <DialogTitle className="font-heading text-2xl text-foreground">Financial Donation</DialogTitle>
-          <DialogDescription className="max-w-xs text-center">Scan the QR code to continue. This is a placeholder code and can be replaced with the official payment QR later.</DialogDescription>
+          <DialogDescription className="max-w-xs text-center">Scan the BharatQR code below to donate securely via UPI, RuPay, Visa, or Mastercard.</DialogDescription>
         </DialogHeader>
-        <img src="/images/qr-financial-placeholder.svg" alt="Financial Donation placeholder QR code" className="mx-auto w-52 rounded-xl bg-white p-3 shadow-glow" />
-        <p className="text-xs font-bold uppercase tracking-widest text-primary">Placeholder QR code</p>
+        <img src="/images/qr-financial-official.jpeg" alt="Space e Schoylar official BharatQR donation code" className="mx-auto w-56 rounded-xl bg-white p-3 shadow-glow" />
 
         <div className="mt-4 rounded-xl border border-primary/20 bg-white/5 p-4 text-left">
           <div className="mb-3 flex items-center justify-center gap-2 text-primary">
             <Landmark size={16} />
-            <p className="text-xs font-bold uppercase tracking-widest">Bank Details (Placeholder)</p>
+            <p className="text-xs font-bold uppercase tracking-widest">Bank Details</p>
           </div>
           <dl className="space-y-1.5 text-sm text-muted-foreground">
             <div className="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
               <dt className="text-foreground/70">Account Name</dt>
-              <dd className="font-medium text-foreground">Sample Foundation Trust</dd>
+              <dd className="font-medium text-foreground">Space e Schoylar</dd>
             </div>
             <div className="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
               <dt className="text-foreground/70">Account Number</dt>
-              <dd className="font-medium text-foreground">000123456789</dd>
+              <dd className="font-medium text-foreground">923020009954933</dd>
             </div>
             <div className="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
               <dt className="text-foreground/70">IFSC Code</dt>
-              <dd className="font-medium text-foreground">SAMP0000123</dd>
+              <dd className="font-medium text-foreground">UTIB0000129</dd>
             </div>
             <div className="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
               <dt className="text-foreground/70">Bank Name</dt>
-              <dd className="font-medium text-foreground">Sample National Bank</dd>
+              <dd className="font-medium text-foreground">Axis Bank</dd>
             </div>
-            <div className="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
+            {/* <div className="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
               <dt className="text-foreground/70">Branch</dt>
               <dd className="font-medium text-foreground">Sample City Branch</dd>
-            </div>
+            </div> */}
           </dl>
-          <p className="mt-3 text-center text-[11px] text-muted-foreground/70">
-            Dummy details for now — replace with official account information before launch.
-          </p>
+          {/* <p className="mt-3 text-center text-[11px] text-muted-foreground/70">
+            Bank account details above are placeholders — replace with your real account, IFSC, and branch before launch.
+          </p> */}
         </div>
       </DialogContent>
     </Dialog>
