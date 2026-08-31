@@ -34,7 +34,7 @@ function DonationDialog() {
           <dl className="space-y-1.5 text-sm text-muted-foreground">
             <div className="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
               <dt className="text-foreground/70">Account Name</dt>
-              <dd className="font-medium text-foreground">Space e Schoylar</dd>
+              <dd className="font-medium text-foreground">Space E Schoylar</dd>
             </div>
             <div className="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
               <dt className="text-foreground/70">Account Number</dt>
