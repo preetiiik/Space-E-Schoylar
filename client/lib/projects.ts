@@ -77,7 +77,7 @@ export const PROJECTS = [
 },
   {
     id: "astronomy-space-lab",
-    title: "Astronomy And Space Lab In Government Schools",
+    title: "Space Lab Setup in Schools",
     icon: Telescope,
     image: "/images/astronomy-spacelab.png",
     desc: "We set up dedicated astronomy and space laboratories inside government schools, giving underprivileged students direct, hands-on access to telescopes, models, and space-science learning tools.",

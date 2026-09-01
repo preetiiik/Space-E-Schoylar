@@ -20,7 +20,7 @@ const PROJECTS = [
   },
   {
     id: "astronomy-space-lab",
-    title: "Astronomy And Space Lab In Government Schools",
+    title: "Space Lab Setup in Schools",
     icon: Telescope,
     desc: "Setting up hands-on astronomy labs to bring space science to public schools.",
     image: "/images/astronomy-spacelab.png",
@@ -253,7 +253,7 @@ export default function Index() {
         <div className="mx-auto max-w-5xl text-center">
           <Reveal>
             <span className="text-sm font-bold uppercase tracking-widest text-primary">
-              Our Training Partner
+              Our Mission Partner
             </span>
             <h2 className="mt-3 font-heading text-3xl font-bold text-foreground sm:text-4xl">
               Himalayan Space Centre

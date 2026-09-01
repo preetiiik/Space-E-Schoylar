@@ -34,6 +34,14 @@ function FacebookIcon({ size = 16 }: { size?: number }) {
   );
 }
 
+function LinkedInIcon({ size = 16 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.446-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.114 20.452H3.558V9h3.556v11.452z" />
+    </svg>
+  );
+}
+
 const NAV_LINKS = [
   { label: "Home", to: "/" },
   { label: "Our Projects", to: "/our-projects" },
@@ -231,6 +239,16 @@ function Footer() {
                 className="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-primary"
               >
                 <FacebookIcon size={16} /> Space E Schoylar
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/company/space-e-schoylar-ngo"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-primary"
+              >
+                <LinkedInIcon size={16} /> Space E Schoylar
               </a>
             </li>
           </ul>
