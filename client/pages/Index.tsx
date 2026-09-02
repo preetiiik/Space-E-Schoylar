@@ -236,7 +236,7 @@ export default function Index() {
         <Reveal>
           <div className="glass-panel mx-auto max-w-4xl p-6 text-center sm:p-10">
             <h2 className="font-heading text-3xl font-bold text-foreground">
-              Why Space Education matters?
+              Why Space Education Matters?
             </h2>
             <p className="mt-5 leading-relaxed text-muted-foreground">
               Space education opens doors to limitless possibilities. It not
@@ -259,7 +259,7 @@ export default function Index() {
               Himalayan Space Centre
             </h2>
             <p className="mt-2 text-muted-foreground">
-              An ISRO Certified Space Tutor
+              An ISRO-certified Space Tutor
             </p>
           </Reveal>
 
@@ -271,20 +271,13 @@ export default function Index() {
                 className="mx-auto mb-6 w-full max-w-[10rem] sm:float-right sm:ml-6 sm:mb-4 sm:max-w-[12rem]"
               />
               <h3 className="font-heading text-2xl font-bold text-foreground">
-                Bridging the Gap between Earth and Beyond...
+                Bridging the Gap Between Earth and Beyond…
               </h3>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                At Space E Schoylar, we go beyond starry lessons, linking
-                space with practical uses. We ignite aspirations, encouraging
-                youth to envision expansive futures in STEAM careers, paving
-                the way for brighter prospects for both themselves and the
-                planet.
+                At Space E Schoylar, we go beyond traditional space education by connecting space science with practical applications. We inspire young minds to explore new possibilities and pursue meaningful careers in STEAM fields, empowering them to contribute to a better future for society and the planet.
               </p>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                Exploring space opens boundless opportunities, igniting
-                curiosity and driving innovation. Your support fuels a
-                brighter future built on knowledge and exploration, advancing
-                scientific progress for generations to come.
+                Exploring space creates limitless opportunities for curiosity, discovery, and innovation. With your support, we can continue to inspire future generations, promote scientific learning, and contribute to lasting progress through knowledge and exploration.
               </p>
               <div className="clear-both" />
               <a

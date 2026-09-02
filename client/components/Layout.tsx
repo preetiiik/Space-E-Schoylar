@@ -187,8 +187,9 @@ function Footer() {
             </span>
           </Link>
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-            An NGO to inspire and empower underprivileged children with the
-            magic of space education and its boundless career possibilities.
+            Space E Schoylar is an NGO dedicated to inspiring and empowering
+  underprivileged children through space education and the boundless
+  opportunities it offers.
           </p>
           <Link
             to="/privacy-policy"
