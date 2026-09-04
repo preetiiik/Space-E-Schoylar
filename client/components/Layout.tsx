@@ -219,7 +219,7 @@ function Footer() {
 
         <div>
           <h4 className="font-heading text-sm font-bold uppercase tracking-wider text-foreground">
-            Socials
+            Connect with us
           </h4>
           <ul className="mt-4 space-y-2.5 text-sm">
             <li>
@@ -276,7 +276,7 @@ function Footer() {
                 <a href="tel:+919606351695" className="transition-colors hover:text-primary">
                   +91 9606351695
                 </a>
-                <span>,</span>
+                <span> </span>
                 <a href="tel:+919731757556" className="transition-colors hover:text-primary">
                   +91 9731757556
                 </a>

@@ -14,7 +14,7 @@ const IMAGES = [
   { src: "/images/gallery/9.webp", alt: "Space Explorers Society gallery photo 9" },
   { src: "/images/gallery/10.webp", alt: "Space Explorers Society gallery photo 10" },
   { src: "/images/gallery/11.webp", alt: "Space Explorers Society gallery photo 11" },
-  { src: "/images/gallery/12.webp", alt: "Space Explorers Society gallery photo 12" },
+  // { src: "/images/gallery/12.webp", alt: "Space Explorers Society gallery photo 12" },
   { src: "/images/gallery/13.webp", alt: "Space Explorers Society gallery photo 13" },
   { src: "/images/gallery/14.webp", alt: "Space Explorers Society gallery photo 14" },
   { src: "/images/gallery/15.webp", alt: "Space Explorers Society gallery photo 15" },

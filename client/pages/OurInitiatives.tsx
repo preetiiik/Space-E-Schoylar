@@ -20,7 +20,7 @@ export default function OurInitiatives() {
             <HeartHandshake size={28} />
           </div>
           <h2 className="mt-6 font-heading text-2xl font-bold text-foreground sm:text-3xl">
-            Adopt To Educate
+            Adopt to Educate
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
             Make a lasting impact by donating ₹7,000 to sponsor a girl's
@@ -49,7 +49,7 @@ export default function OurInitiatives() {
             Help us bring space education on wheels to children who&apos;ve never
             had the chance to look through a telescope or dream about the
             stars. Your support will help build India&apos;s first Mobile Space Lab
-            — reaching schools and villages our fixed labs cannot.
+            — reaching schools and villages, our fixed labs cannot.
           </p>
           <p className="mt-4 leading-relaxed text-muted-foreground italic">
             This project is currently in its fundraising stage. Every
@@ -96,9 +96,8 @@ export default function OurInitiatives() {
               individuals to contribute to positive change by collaborating
               with the foundation. This fellowship aims to provide hands-on
               experience in developing platforms within the space and
-              educational sectors. It's open to science and related
-              background professionals with 0 to 2 years of experience. The
-              two-year program is designed to empower fellows to realize
+              educational sectors. It is open to professionals from science and related fields
+              with 0 to 2 years of experience. The two-year program is designed to empower fellows to realize
               their potential impact with the support of the space education
               community.
             </p>

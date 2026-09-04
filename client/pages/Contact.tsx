@@ -37,18 +37,37 @@ export default function Contact() {
   const [status, setStatus] = useState<"idle" | "success">("idle");
 
   const validate = (): boolean => {
-    const next: Partial<FormState> = {};
-    if (!form.name.trim()) next.name = "Name is required.";
-    if (!form.email.trim()) next.email = "Email is required.";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
-      next.email = "Enter a valid email address.";
-    if (!form.phone.trim()) next.phone = "Phone number is required.";
-    else if (!/^[0-9+\-\s]{7,15}$/.test(form.phone))
-      next.phone = "Enter a valid phone number.";
-    if (!form.message.trim()) next.message = "Please add a message.";
-    setErrors(next);
-    return Object.keys(next).length === 0;
-  };
+  const next: Partial<FormState> = {};
+
+  // Name validation
+  if (!form.name.trim()) {
+    next.name = "Name is required.";
+  } else if (!/^[A-Za-z\s]+$/.test(form.name.trim())) {
+    next.name = "Name should contain only letters and spaces.";
+  }
+
+  // Email validation
+  if (!form.email.trim()) {
+    next.email = "Email is required.";
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) {
+    next.email = "Enter a valid email address.";
+  }
+
+  // Phone validation - exactly 10 digits
+  if (!form.phone.trim()) {
+    next.phone = "Phone number is required.";
+  } else if (!/^\d{10}$/.test(form.phone.trim())) {
+    next.phone = "Phone number must contain exactly 10 digits.";
+  }
+
+  // Message validation
+  if (!form.message.trim()) {
+    next.message = "Please add a message.";
+  }
+
+  setErrors(next);
+  return Object.keys(next).length === 0;
+};
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
@@ -181,7 +200,7 @@ export default function Contact() {
                 className={inputClass}
                 value={form.phone}
                 onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                placeholder="+91 00000 00000"
+                placeholder="Enter 10-digit phone number"
               />
               {errors.phone && (
                 <p className="mt-1.5 text-xs text-destructive">

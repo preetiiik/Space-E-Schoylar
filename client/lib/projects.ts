@@ -8,9 +8,9 @@ export const PROJECTS = [
   image: "/images/girl-in-space.png",
 
   desc: [
-    `In many of the communities we work in, girls are rarely encouraged to pursue science — let alone dream of space. Our "Girls in Space" initiative was created to change that.`,
+    `In many of the communities we work in, girls are rarely encouraged to pursue science — let alone dream of space. Our "Girls in Space" initiative was created to change that. `,
 
-    `Through hands-on astronomy sessions, telescope observations, and STEM workshops, we help girls from underserved schools discover that science, discovery, and the universe belong to them too. Since launching this program, nearly 100 girls have completed training across 4 batches, gaining not just technical exposure but the confidence to see themselves as future scientists, engineers, and astronomers.`,
+    `Through hands-on astronomy sessions, telescope observations, and STEM workshops, we help girls from underserved schools discover that science, discovery, and the universe belong to them too. Since launching this program, nearly 100 girls have completed training across 4 batches, gaining not just technical exposure but the confidence to see themselves as future scientists, engineers, and astronomers. `,
 
     `Every batch is a step closer to a simple belief: representation starts early.`
   ],
@@ -37,7 +37,8 @@ export const PROJECTS = [
         "/images/girls-in-space/batch1/11.webp",
         "/images/girls-in-space/batch1/12.webp",
         "/images/girls-in-space/batch1/13.webp",
-        "/images/girls-in-space/batch1/14.webp",
+
+        // "/images/girls-in-space/batch1/14.webp",
       ],
     },
     {
@@ -80,7 +81,7 @@ export const PROJECTS = [
     title: "Space Lab Setup in Schools",
     icon: Telescope,
     image: "/images/astronomy-spacelab.png",
-    desc: "We set up dedicated astronomy and space laboratories inside government schools, giving underprivileged students direct, hands-on access to telescopes, models, and space-science learning tools.",
+    desc: "We set up dedicated astronomy and space laboratories inside government schools, giving underprivileged students direct, hands-on access to telescopes, models, and space science learning tools.",
     gallery: ["/images/astronomy-spacelab.png", "/images/about-us.png", "/images/stargazing-astronomy.png"],
     gallerySections: [
       {
@@ -118,14 +119,14 @@ export const PROJECTS = [
   },
 {
   id: "star-gazing-astronomy",
-  title: "Star Gazing And Astronomy",
+  title: "Star Gazing and Astronomy",
   icon: Compass,
   image: "/images/stargazing-astronomy.png",
 
   desc: [
-    `For most children in the communities we work with, the night sky is something they've only seen — never truly explored. Our Star Gazing and Astronomy sessions bring that experience to life.`,
+    `For most children in the communities we work with, the night sky is something they've only seen — never truly explored. Our Star Gazing and Astronomy sessions bring that experience to life. `,
 
-    `Using professional telescopes, our team travels to schools, community centers, and residential homes to give children a first-hand look at the Moon's craters, planets like Jupiter and Mars, distant constellations, and even artificial satellites moving across the sky. Each session is guided by our team along with astronomy experts and partner organizations, turning a simple night under the stars into a child's first real encounter with space science.`,
+    `Using professional telescopes, our team travels to schools, community centers, and residential communities to give children a firsthand look at the Moon's craters, planets like Jupiter and Mars, distant constellations, and even artificial satellites moving across the sky. Each session is guided by our team along with astronomy experts and partner organizations, turning a simple night under the stars into a child's first real encounter with space science. `,
 
     `We've conducted these sessions across 104 government schools, reaching over 10,500 children — with many more sessions ongoing.`
   ],
@@ -141,7 +142,7 @@ export const PROJECTS = [
     title: "Women Astronomy Club",
     icon: Users,
     image: "/images/women-astronomy-club.png",
-    desc: "A dedicated club that creates leadership and learning opportunities for women in astronomy, building a supportive community for the next generation of space scientists.",
+    desc: "A dedicated club that empowers women through learning and leadership opportunities in astronomy, fostering a supportive community for the next generation of space scientists.",
     gallery: [
       "/images/women-club/1.webp",
       "/images/women-club/2.webp",
@@ -155,8 +156,8 @@ export const PROJECTS = [
     image: "/images/mobile-space-lab/1.png",
     status: "Coming Soon",
     desc: [
-      "Not every child can travel to a Space Lab — so we're bringing the lab to them.",
-      "We're developing a Mobile Space Lab: a 40-seater bus fully converted into a moving cosmic classroom, designed to reach schools and villages our fixed labs cannot. Every surface inside will be built to teach — the ceiling mapping moon phases, constellations, and satellites, while the walls illustrate eclipses, rocket stages, and orbital paths. Seat-back panels will bring learning to every student with flip charts, QR codes, mini models, and VR space activities. At the rear, a holographic demo zone will let children interact with solar system displays and hands-on experiments — turning every journey into an immersive science experience.",
+      "Not every child can travel to a Space Lab — so we're bringing the lab to them. ",
+      "We're developing a Mobile Space Lab: a 40-seater bus fully converted into a moving cosmic classroom, designed to reach schools and villages our fixed labs cannot. Every surface inside will be built to teach — the ceiling mapping moon phases, constellations, and satellites, while the walls illustrate eclipses, rocket stages, and orbital paths. Seat-back panels will bring learning to every student with flip charts, QR codes, mini models, and VR space activities. At the rear, a holographic demo zone will let children interact with solar system displays and hands-on experiments — turning every journey into an immersive science experience. ",
       "This project is currently in the development and fundraising stage. With your support, we can bring space education directly to the doorstep of children who've never had access to it.",
     ],
     gallery: [

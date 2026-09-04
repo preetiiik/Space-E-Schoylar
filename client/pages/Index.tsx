@@ -43,7 +43,7 @@ const PROJECTS = [
     id: "mobile-space-lab",
     title: "Mobile Space Lab",
     icon: Rocket,
-    desc: "A Space Lab on wheels, bringing hands-on space education directly to schools and villages our fixed labs can't reach.",
+    desc: "A Space Lab on wheels, bringing hands-on space education directly to schools and villages that our fixed labs can't reach.",
     image: "/images/mobile-space-lab/1.png",
     status: "Coming Soon",
   },

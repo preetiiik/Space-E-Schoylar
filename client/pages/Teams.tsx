@@ -2,7 +2,7 @@ import { useState } from "react";
 import Reveal from "@/components/Reveal";
 
 const TEAM = [
-  { name: "Shreedevi Roogi", role: "Founder President", image: "/images/teams/shreedevi.webp" },
+  { name: "Shreedevi Roogi", role: "Founder and President", image: "/images/teams/shreedevi.webp" },
   { name: "Veeresh Patil", role: "Director", image: "/images/teams/veeresh.webp" },
   { name: "Suma Nalawadi", role: "Space Tutor", image: "/images/teams/suma.webp" },
   { name: "Meghana", role: "Space Tutor", image: "/images/teams/meghana.webp" },

@@ -71,7 +71,7 @@ export default function Donation() {
             Join the cause
           </span>
           <h1 className="mt-3 font-heading text-4xl font-extrabold text-foreground sm:text-5xl">
-            How You Can Make a{" "}
+            How Can You Make a{" "}
             <span className="cosmic-text">Difference?</span>
           </h1>
         </Reveal>
@@ -89,10 +89,10 @@ export default function Donation() {
             <p className="leading-relaxed">
               Every contribution, regardless of size, has a meaningful
               impact. Join us in something extraordinary—inspiring,
-              educating, and shaping the future of many.
+              educating, and shaping the future of many young minds.
             </p>
             <p className="leading-relaxed">
-              Are you prepared to embark on this cosmic journey together?
+              Are you prepared to embark on this cosmic journey with us?
               Click the donation button and become a catalyst for change
               today.
             </p>
@@ -116,7 +116,7 @@ export default function Donation() {
                 Financial Donation
               </h2>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                Fuel scholarships, lab equipment, and workshops that bring
+                Fund scholarships, lab equipment, and workshops that bring
                 space education directly to underprivileged children.
               </p>
               <div className="mt-auto pt-2">
@@ -154,7 +154,7 @@ export default function Donation() {
           <div className="glass-panel mt-8 flex flex-col items-center gap-3 p-6 text-center">
             <ShieldCheck className="text-primary" size={28} />
             <p className="font-semibold text-foreground">
-              Get tax benefits with 80G
+              Get tax benefits under section 80G
             </p>
           </div>
         </Reveal>
