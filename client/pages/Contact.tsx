@@ -20,6 +20,7 @@ function WhatsAppIcon({ size = 18 }: { size?: number }) {
 interface FormState {
   name: string;
   email: string;
+  location: string;
   phone: string;
   message: string;
 }
@@ -27,6 +28,7 @@ interface FormState {
 const INITIAL_STATE: FormState = {
   name: "",
   email: "",
+  location: "",
   phone: "",
   message: "",
 };
@@ -51,6 +53,10 @@ export default function Contact() {
     next.email = "Email is required.";
   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) {
     next.email = "Enter a valid email address.";
+  }
+
+  if (!form.location.trim()) {
+    next.location = "Location is required.";
   }
 
   // Phone validation - exactly 10 digits
@@ -187,6 +193,25 @@ export default function Contact() {
               {errors.email && (
                 <p className="mt-1.5 text-xs text-destructive">
                   {errors.email}
+                </p>
+              )}
+            </div>
+
+            <div>
+              <label className="mb-1.5 block text-sm font-semibold text-foreground">
+                Location
+              </label>
+              <input
+                className={inputClass}
+                value={form.location}
+                onChange={(e) =>
+                  setForm({ ...form, location: e.target.value })
+                }
+                placeholder="City, State"
+              />
+              {errors.location && (
+                <p className="mt-1.5 text-xs text-destructive">
+                  {errors.location}
                 </p>
               )}
             </div>

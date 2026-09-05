@@ -48,7 +48,7 @@ const NAV_LINKS = [
   { label: "Our Initiatives", to: "/our-initiatives" },
   { label: "Donation", to: "/donation" },
   { label: "Gallery", to: "/gallery" },
-  { label: "Teams", to: "/teams" },
+  { label: "Our Team", to: "/teams" },
   { label: "Contact Us", to: "/contact" },
 ];
 

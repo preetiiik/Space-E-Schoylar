@@ -5,13 +5,20 @@ const TEAM = [
   { name: "Shreedevi Roogi", role: "Founder and President", image: "/images/teams/shreedevi.webp" },
   { name: "Veeresh Patil", role: "Director", image: "/images/teams/veeresh.webp" },
   { name: "Suma Nalawadi", role: "Space Tutor", image: "/images/teams/suma.webp" },
-  { name: "Meghana", role: "Space Tutor", image: "/images/teams/meghana.webp" },
   { name: "Pramuda P Agnihotri", role: "Space Tutor", image: "/images/teams/pramuda.webp" },
-  { name: "Riya Maloo", role: "Marketing Executive", image: "/images/teams/riya.webp" },
-  { name: "Sabila Mulla", role: "Volunteer", image: "/images/teams/sabila.webp" },
+];
+
+const VOLUNTEERS = [
   { name: "Ruchi Mahajan", role: "Volunteer", image: "/images/teams/ruchi.webp" },
-  { name: "Aishwarya Kadam", role: "Volunteer", image: "/images/teams/aishwarya.webp" },
-  { name: "Shreya Agarwal", role: "Volunteer", image: "/images/teams/shreya.webp" },
+  // Current WYD roster, sourced from https://writeyourdestiny.in/about-us/
+  { name: "Sanghamitra Sur", role: "Lead Talent Acquisition", image: "/images/teams/wyd-sanghamitra.jpg" },
+  { name: "Divya Isari", role: "Talent Acquisition Partner", image: "/images/teams/wyd-divya.jpeg" },
+  { name: "Pooja Kolkar", role: "Talent Acquisition Partner", image: "/images/teams/wyd-pooja.jpeg" },
+  { name: "Akshata Bhandage", role: "Talent Acquisition Partner", image: "/images/teams/wyd-akshata.jpeg" },
+  { name: "Bharati Agadi", role: "Talent Acquisition Partner", image: "/images/teams/wyd-bharati.jpg" },
+  { name: "Vaishnavi Hiremorab", role: "Business Development Executive", image: "/images/teams/wyd-vaishnavi.jpeg" },
+  { name: "Meghana Athani", role: "Volunteer", image: "/images/teams/meghana.webp" },
+  { name: "Chetana Chavanagoudar", role: "Volunteer", image: "/images/teams/chetana.webp" },
 ];
 
 function initials(name: string) {
@@ -46,6 +53,28 @@ function TeamAvatar({ name, image }: { name: string; image: string }) {
   );
 }
 
+function TeamGrid({ members }: { members: typeof TEAM }) {
+  return (
+    <div className="grid grid-cols-2 gap-3 sm:gap-6 sm:grid-cols-4">
+      {members.map((member, i) => (
+        <Reveal key={member.name} delay={i * 60}>
+          <div className="glass-card flex h-full flex-col items-center gap-4 p-4 text-center sm:gap-5 sm:p-8">
+            <TeamAvatar name={member.name} image={member.image} />
+            <div>
+              <h3 className="font-heading text-sm font-bold text-foreground">
+                {member.name}
+              </h3>
+              <p className="mt-1 text-xs font-medium text-primary/80">
+                {member.role}
+              </p>
+            </div>
+          </div>
+        </Reveal>
+      ))}
+    </div>
+  );
+}
+
 export default function Teams() {
   return (
     <div className="section-padding mx-auto max-w-6xl">
@@ -58,23 +87,23 @@ export default function Teams() {
         </h1>
       </Reveal>
 
-      <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-14 sm:gap-6 sm:grid-cols-4">
-        {TEAM.map((member, i) => (
-          <Reveal key={member.name} delay={i * 60}>
-            <div className="glass-card flex h-full flex-col items-center gap-4 p-4 text-center sm:gap-5 sm:p-8">
-              <TeamAvatar name={member.name} image={member.image} />
-              <div>
-                <h3 className="font-heading text-sm font-bold text-foreground">
-                  {member.name}
-                </h3>
-                <p className="mt-1 text-xs font-medium text-primary/80">
-                  {member.role}
-                </p>
-              </div>
-            </div>
-          </Reveal>
-        ))}
+      <div className="mt-10 sm:mt-14">
+        <TeamGrid members={TEAM} />
       </div>
+
+      <section className="mt-14 sm:mt-20" aria-labelledby="volunteers-heading">
+        <Reveal>
+          <h2
+            id="volunteers-heading"
+            className="font-heading text-2xl font-extrabold text-foreground sm:text-3xl"
+          >
+            <span className="cosmic-text">Volunteers</span>
+          </h2>
+        </Reveal>
+        <div className="mt-6 sm:mt-8">
+          <TeamGrid members={VOLUNTEERS} />
+        </div>
+      </section>
     </div>
   );
 }

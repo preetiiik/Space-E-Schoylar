@@ -135,11 +135,16 @@ export default function Index() {
           <div className="mt-12 grid gap-10 lg:grid-cols-2 lg:items-start lg:gap-14">
             <div className="lg:sticky lg:top-28">
               <Reveal delay={100}>
-                <div className="glass-panel overflow-hidden p-0">
+                <div className="glass-panel grid gap-3 overflow-hidden p-3 sm:gap-4 sm:p-4">
                   <img
-                    src="/images/about-us.png"
-                    alt="Space and Astronomy classroom set up by Space E Schoylar"
-                    className="max-h-[620px] w-full object-cover"
+                    src="/images/about-us1.jpeg"
+                    alt="Space education models and exhibits at a Space E Schoylar learning centre"
+                    className="aspect-[4/3] w-full rounded-xl object-cover"
+                  />
+                  <img
+                    src="/images/about-us2.jpeg"
+                    alt="Students visiting a Space E Schoylar astronomy learning centre"
+                    className="aspect-[4/3] w-full rounded-xl object-cover"
                   />
                 </div>
               </Reveal>
