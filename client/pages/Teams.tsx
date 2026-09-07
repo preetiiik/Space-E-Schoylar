@@ -11,13 +11,13 @@ const TEAM = [
 const VOLUNTEERS = [
   { name: "Ruchi Mahajan", role: "Volunteer", image: "/images/teams/ruchi.webp" },
   // Current WYD roster, sourced from https://writeyourdestiny.in/about-us/
-  { name: "Sanghamitra Sur", role: "Lead Talent Acquisition", image: "/images/teams/wyd-sanghamitra.jpg" },
-  { name: "Divya Isari", role: "Talent Acquisition Partner", image: "/images/teams/wyd-divya.jpeg" },
-  { name: "Pooja Kolkar", role: "Talent Acquisition Partner", image: "/images/teams/wyd-pooja.jpeg" },
-  { name: "Akshata Bhandage", role: "Talent Acquisition Partner", image: "/images/teams/wyd-akshata.jpeg" },
-  { name: "Bharati Agadi", role: "Talent Acquisition Partner", image: "/images/teams/wyd-bharati.jpg" },
-  { name: "Vaishnavi Hiremorab", role: "Business Development Executive", image: "/images/teams/wyd-vaishnavi.jpeg" },
-  { name: "Meghana Athani", role: "Volunteer", image: "/images/teams/meghana.webp" },
+  { name: "Sanghamitra Sur", role: "Volunteer", image: "/images/teams/wyd-sanghamitra.jpg" },
+  { name: "Divya Isari", role: "Volunteer", image: "/images/teams/wyd-divya.jpeg" },
+  { name: "Pooja Kolkar", role: "Volunteer", image: "/images/teams/wyd-pooja.jpeg" },
+  { name: "Akshata Bhandage", role: "Volunteer", image: "/images/teams/wyd-akshata.jpeg" },
+  { name: "Bharati Agadi", role: "Volunteer", image: "/images/teams/wyd-bharati.jpg" },
+  { name: "Vaishnavi Hiremorab", role: "Volunteer", image: "/images/teams/wyd-vaishnavi.jpeg" },
+  { name: "Meghana Athani", role: "Volunteer", image: "/images/teams/meghana-v-athanni.jpg" },
   { name: "Chetana Chavanagoudar", role: "Volunteer", image: "/images/teams/chetana.webp" },
 ];
 
