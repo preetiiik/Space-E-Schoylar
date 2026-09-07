@@ -17,7 +17,7 @@ const VOLUNTEERS = [
   { name: "Akshata Bhandage", role: "Volunteer", image: "/images/teams/wyd-akshata.jpeg" },
   { name: "Bharati Agadi", role: "Volunteer", image: "/images/teams/wyd-bharati.jpg" },
   { name: "Vaishnavi Hiremorab", role: "Volunteer", image: "/images/teams/wyd-vaishnavi.jpeg" },
-  { name: "Meghana Athani", role: "Volunteer", image: "/images/teams/meghana-v-athanni.jpg" },
+  { name: "Meghana Athani", role: "Volunteer", image: "/images/teams/meghana-v-athani.jpg" },
   { name: "Chetana Chavanagoudar", role: "Volunteer", image: "/images/teams/chetana.webp" },
 ];
 
