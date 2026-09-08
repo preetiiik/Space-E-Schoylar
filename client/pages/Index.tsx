@@ -132,26 +132,26 @@ export default function Index() {
             </h2>
           </Reveal>
 
-          <div className="mt-12 grid gap-10 lg:grid-cols-2 lg:items-start lg:gap-14">
+          <div className="mt-12 grid gap-10 lg:grid-cols-2 lg:items-stretch lg:gap-14">
             <div className="lg:sticky lg:top-28">
-              <Reveal delay={100}>
-                <div className="glass-panel grid gap-3 overflow-hidden p-3 sm:gap-4 sm:p-4">
+              <Reveal delay={100} className="h-full">
+                <div className="glass-panel flex h-full flex-col gap-3 overflow-hidden p-3 sm:gap-4 sm:p-4">
                   <img
                     src="/images/about-us1.jpeg"
                     alt="Space education models and exhibits at a Space E Schoylar learning centre"
-                    className="aspect-[4/3] w-full rounded-xl object-cover"
+                    className="w-full flex-1 rounded-xl object-cover"
                   />
                   <img
                     src="/images/about-us2.jpeg"
                     alt="Students visiting a Space E Schoylar astronomy learning centre"
-                    className="aspect-[4/3] w-full rounded-xl object-cover"
+                    className="w-full flex-1 rounded-xl object-cover"
                   />
                 </div>
               </Reveal>
             </div>
 
-            <Reveal delay={150}>
-              <div className="glass-panel space-y-5 p-5 text-left text-muted-foreground sm:p-10">
+            <Reveal delay={150} className="h-full">
+              <div className="glass-panel flex h-full flex-col justify-center space-y-5 p-5 text-left text-muted-foreground sm:p-10">
                 <p className="leading-relaxed">
                   Welcome to Space E Schoylar (SES) — where the cosmos becomes the classroom, and children who've never had access to science education get to reach for the stars.
                 </p>
