@@ -157,7 +157,7 @@ export const PROJECTS = [
     status: "Coming Soon",
     desc: [
       "Not every child can travel to a Space Lab — so we're bringing the lab to them. ",
-      "We're developing a Mobile Space Lab: a 40-seater bus fully converted into a moving cosmic classroom, designed to reach schools and villages our fixed labs cannot. Every surface inside will be built to teach — the ceiling mapping moon phases, constellations, and satellites, while the walls illustrate eclipses, rocket stages, and orbital paths. Seat-back panels will bring learning to every student with flip charts, QR codes, mini models, and VR space activities. At the rear, a holographic demo zone will let children interact with solar system displays and hands-on experiments — turning every journey into an immersive science experience. ",
+      "We're developing a Mobile Space Lab: a 40-seat bus fully converted into a moving cosmic classroom, designed to reach schools and villages that our fixed labs cannot. Every surface inside will be built to teach — the ceiling mapping moon phases, constellations, and satellites, while the walls illustrate eclipses, rocket stages, and orbital paths. Seat-back panels will bring learning to every student with flip charts, QR codes, mini models, and VR space activities. At the rear, a holographic demo zone will let children interact with solar system displays and hands-on experiments — turning every journey into an immersive science experience. ",
       "This project is currently in the development and fundraising stage. With your support, we can bring space education directly to the doorstep of children who've never had access to it.",
     ],
     gallery: [

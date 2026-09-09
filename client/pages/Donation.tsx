@@ -92,7 +92,7 @@ export default function Donation() {
               educating, and shaping the future of many young minds.
             </p>
             <p className="leading-relaxed">
-              Are you prepared to embark on this cosmic journey with us?
+              Are you ready to embark on this cosmic journey with us?
               Click the donation button and become a catalyst for change
               today.
             </p>

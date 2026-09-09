@@ -270,18 +270,25 @@ function Footer() {
                 <WhatsAppIcon size={16} /> Chat with us on WhatsApp
               </a>
             </li>
-            <li className="inline-flex items-center gap-2">
-              <Phone size={16} />
-              <span className="flex flex-wrap items-center gap-x-1">
-                <a href="tel:+919606351695" className="transition-colors hover:text-primary">
-                  +91 9606351695
-                </a>
-                <span> </span>
-                <a href="tel:+919731757556" className="transition-colors hover:text-primary">
-                  +91 9731757556
-                </a>
-              </span>
-            </li>
+           <li className="flex items-start gap-2">
+  <Phone size={16} className="mt-0.5 shrink-0" />
+
+  <div className="flex flex-col gap-1">
+    <a
+      href="tel:+919606351695"
+      className="transition-colors hover:text-primary"
+    >
+      +91 9606351695
+    </a>
+
+    <a
+      href="tel:+919731757556"
+      className="transition-colors hover:text-primary"
+    >
+      +91 9731757556
+    </a>
+  </div>
+</li>
             <li>
               <a
                 href="mailto:connect@spaceeschoylar.ngo"
@@ -295,16 +302,17 @@ function Footer() {
       </div>
 
       <div className="border-t border-white/10 px-4 py-6 text-center text-xs text-muted-foreground sm:px-6">
-  © {new Date().getFullYear()} Space E Schoylar. All Rights Reserved.{" "}
-  <span>Powered by </span>
-  <a
-    href="https://spitel.com"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="font-semibold transition-colors hover:text-primary"
-  >
-    Spitel Pvt. Ltd.
-  </a>
+© {new Date().getFullYear()} Space E Schoylar.
+<span className="ml-2">All Rights Reserved.</span>
+<span className="ml-3">Powered by </span>
+<a
+  href="https://spitel.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="font-semibold transition-colors hover:text-primary"
+>
+  Spitel Pvt. Ltd.
+</a>
 </div>
     </footer>
   );
