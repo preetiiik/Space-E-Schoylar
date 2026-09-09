@@ -301,19 +301,23 @@ function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/10 px-4 py-6 text-center text-xs text-muted-foreground sm:px-6">
-© {new Date().getFullYear()} Space E Schoylar.
-<span className="ml-2">All Rights Reserved.</span>
-<span className="ml-3">Powered by </span>
-<a
-  href="https://spitel.com"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="font-semibold transition-colors hover:text-primary"
+<div
+  className="border-t border-white/10 px-4 py-6 text-center text-xs text-muted-foreground sm:px-6"
+  style={{ wordSpacing: "2px" }}
 >
-  Spitel Pvt. Ltd.
-</a>
+  © {new Date().getFullYear()} Space E Schoylar.{" "}
+  <span>All Rights Reserved.</span>{" "}
+  <span>Powered by </span>
+  <a
+    href="https://spitel.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="font-semibold transition-colors hover:text-primary"
+  >
+    Spitel Pvt. Ltd.
+  </a>
 </div>
+
     </footer>
   );
 }
