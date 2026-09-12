@@ -174,7 +174,7 @@ function Navbar() {
 function Footer() {
   return (
     <footer className="relative z-10 border-t border-white/10 bg-background/60 backdrop-blur-xl">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:grid-cols-2 sm:px-6 sm:py-16 lg:grid-cols-4 lg:px-10">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-x-10 gap-y-10 px-4 py-12 sm:grid-cols-2 sm:px-6 sm:py-16 lg:grid-cols-[1.6fr_1fr_1fr_1fr] lg:gap-x-12 lg:px-10">
         <div className="sm:col-span-2 lg:col-span-1">
           <Link to="/" className="flex items-center gap-3">
             <img
@@ -186,7 +186,7 @@ function Footer() {
               Space E Schoylar
             </span>
           </Link>
-          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+          <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
             Space E Schoylar is an NGO dedicated to inspiring and empowering
   underprivileged children through space education and the boundless
   opportunities it offers.
@@ -199,7 +199,7 @@ function Footer() {
           </Link>
         </div>
 
-        <div>
+        <div className="lg:ml-8">
           <h4 className="font-heading text-sm font-bold uppercase tracking-wider text-foreground">
             Links
           </h4>
