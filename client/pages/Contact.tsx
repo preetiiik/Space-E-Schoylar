@@ -81,65 +81,144 @@ export default function Contact() {
     return Object.keys(next).length === 0;
   };
 
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
+  // const handleSubmit = async (e: FormEvent) => {
+  //   e.preventDefault();
 
-    if (!validate()) {
-      setStatus("idle");
-      return;
-    }
+  //   if (!validate()) {
+  //     setStatus("idle");
+  //     return;
+  //   }
 
-    try {
-      setIsSubmitting(true);
-      setStatus("idle");
+  //   try {
+  //     setIsSubmitting(true);
+  //     setStatus("idle");
 
-      // Send form data to the Express backend
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: form.name.trim(),
-          email: form.email.trim(),
-          location: form.location.trim(),
-          phone: form.phone.trim(),
-          message: form.message.trim(),
-        }),
-      });
+  //     // Send form data to the Express backend
+  //     const response = await fetch("/api/contact", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({
+  //         name: form.name.trim(),
+  //         email: form.email.trim(),
+  //         location: form.location.trim(),
+  //         phone: form.phone.trim(),
+  //         message: form.message.trim(),
+  //       }),
+  //     });
 
-      const data = await response.json();
+  //     const data = await response.json();
 
-      if (!response.ok) {
-        throw new Error(
-          data.message || "Failed to send inquiry."
-        );
+  //     if (!response.ok) {
+  //       throw new Error(
+  //         data.message || "Failed to send inquiry."
+  //       );
+  //     }
+
+  //     // SUCCESS
+  //     setStatus("success");
+
+  //     // Show success popup
+  //     setShowSuccessPopup(true);
+
+  //     // Clear form
+  //     setForm(INITIAL_STATE);
+
+  //     // Clear validation errors
+  //     setErrors({});
+  //   } catch (error) {
+  //     console.error("Contact form error:", error);
+
+  //     const message =
+  //       error instanceof Error
+  //         ? error.message
+  //         : "Unable to send your inquiry. Please try again later.";
+
+  //     alert(message);
+  //   } finally {
+  //     setIsSubmitting(false);
+  //   }
+  // };
+
+const handleSubmit = async (e: FormEvent) => {
+  e.preventDefault();
+
+  if (!validate()) {
+    setStatus("idle");
+    return;
+  }
+
+  try {
+    setIsSubmitting(true);
+    setStatus("idle");
+
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: form.name.trim(),
+        email: form.email.trim(),
+        location: form.location.trim(),
+        phone: form.phone.trim(),
+        message: form.message.trim(),
+      }),
+    });
+
+    // Read response as text first
+    // This prevents "Unexpected end of JSON input"
+    const responseText = await response.text();
+
+    let data: {
+      success?: boolean;
+      message?: string;
+    } = {};
+
+    if (responseText) {
+      try {
+        data = JSON.parse(responseText);
+      } catch {
+        console.error("Server returned non-JSON response:", responseText);
       }
-
-      // SUCCESS
-      setStatus("success");
-
-      // Show success popup
-      setShowSuccessPopup(true);
-
-      // Clear form
-      setForm(INITIAL_STATE);
-
-      // Clear validation errors
-      setErrors({});
-    } catch (error) {
-      console.error("Contact form error:", error);
-
-      const message =
-        error instanceof Error
-          ? error.message
-          : "Unable to send your inquiry. Please try again later.";
-
-      alert(message);
-    } finally {
-      setIsSubmitting(false);
     }
-  };
+
+    if (!response.ok) {
+      throw new Error(
+        data.message ||
+          `Server error (${response.status}). Please try again later.`
+      );
+    }
+
+    if (data.success !== true) {
+      throw new Error(
+        data.message || "Unable to send your inquiry."
+      );
+    }
+
+    // SUCCESS
+    setStatus("success");
+    setShowSuccessPopup(true);
+
+    // Clear form
+    setForm(INITIAL_STATE);
+
+    // Clear validation errors
+    setErrors({});
+  } catch (error) {
+    console.error("Contact form error:", error);
+
+    const message =
+      error instanceof Error
+        ? error.message
+        : "Unable to send your inquiry. Please try again later.";
+
+    alert(message);
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   const inputClass =
     "w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 outline-none transition-colors focus:border-primary/60 focus:ring-2 focus:ring-primary/30";
