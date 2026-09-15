@@ -153,7 +153,7 @@ const handleSubmit = async (e: FormEvent) => {
     setIsSubmitting(true);
     setStatus("idle");
 
-    const response = await fetch("/api/contact", {
+    const response = await fetch("/api/contact.ts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
